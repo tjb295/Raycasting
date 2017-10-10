@@ -82,21 +82,20 @@ V3 raycast(V3 Rd, int width, int height, OBECT_LIST_STR *list);
 	//keep track of the closest object
 
 	//handle each object based on the type it is
-	int num_objects = list.numObjects;
-	for(int i = 0; i < num_objects; i += 1)
+	for(int i = 0; i < list[0].numObjects; i += 1)
 	{
 		//check for sphere object
-		if(strcmp(list->listOfObjects[i].objectName, "sphere") == 1)
+		if(strcmp(list[0].listOfObjects[i].objectName, "sphere") != 0)
 		{
 
 		}
 		//check for plane
-		else if(strcmp(list->listOfObjects[i].objectName, "plane") == 1)
+		else if(strcmp(list[0].listOfObjects[i].objectName, "plane") != 0)
 		{
 
 		}
 		//check for a camera object
-		else if(strcmp(list->listOfObjects[i].objectName "camera") == 1)
+		else if(strcmp(list[0].listOfObjects[i].objectName, "camera") != 0)
 		{
 
 		}

@@ -28,10 +28,26 @@ int main(int argc, char** argv)
 		return 1;
 	}
     
-    printf("Running parser with file %s\n",argv[1]);
-    OBJECT_LIST_STR  *list = getProperties(argv[1]);
+    printf("Running parser with file %s\n",argv[3]);
+    OBJECT_LIST_STR  *list = getProperties(argv[3]);
 
-    render(argv[1], argv[2], list, argv[4]);
+    //print the properties to try to get them
+    printf("%d is the number of objects \n", list[0].numObjects);
+
+    for (int i = 0; i < list[0].numObjects; i+=1)
+    {
+    	printf("%s is the object %d \n", list[0].listOfObjects[i].objectName, i);
+    	for (int j = 0; j < list[0].listOfObjects[i].numProperties; j += 1)
+    	{
+    		printf("	%s is property %d \n", list[0].listOfObjects[i].properties[j].property, j);
+    		for (int k = 0; k < list[0].listOfObjects[i].properties[j].numValues; k += 1 )
+    		{
+    			printf("		%lf is the property value \n", list[0].listOfObjects[i].properties[j].data[k]);
+    		}
+    	}
+    }
+
+    //render(argv[1], argv[2], list, argv[4]);
 
     
     
