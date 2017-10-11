@@ -1,14 +1,7 @@
-/* 
- * File:   main.cpp
- * Author: jb27617
- *
- * Created on October 2, 2017, 6:11 PM
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "PropertyParser.h"
-#include "RayCaster.h"
+#include "raycaster.h"
 
 void cleanUpObjectList(OBJECT_LIST_STR * _objectList);
 OBJECT_LIST_STR *getProperties(char *_filename);
@@ -22,7 +15,7 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
-	if(argv[1] <= 0 || argv[2] <= 0)
+	if(atoi(argv[1]) <= 0 || atoi(argv[2]) <= 0)
 	{
 		fprintf(stderr, "Error: Width and Height cannot be equal to or less than 0. \n");
 		return 1;
@@ -47,7 +40,7 @@ int main(int argc, char** argv)
     	}
     }
 
-    //render(argv[1], argv[2], list, argv[4]);
+    render(atoi(argv[1]), atoi(argv[2]), list, argv[4]);
 
     
     

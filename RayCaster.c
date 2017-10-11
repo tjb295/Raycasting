@@ -4,7 +4,7 @@
 #include "raycaster.h"
 #include "3dMathLib/3dmath.h"
 
-int render(int height, int width, OBECT_LIST_STR *list, char* output)
+int render(int height, int width, OBJECT_LIST_STR *list, char* output)
 {
 	double focal_length = -1;
 
@@ -87,17 +87,17 @@ V3 raycast(V3 Rd, int width, int height, OBECT_LIST_STR *list);
 		//check for sphere object
 		if(strcmp(list[0].listOfObjects[i].objectName, "sphere") != 0)
 		{
-
+			printf("Sphere! \n");
 		}
 		//check for plane
 		else if(strcmp(list[0].listOfObjects[i].objectName, "plane") != 0)
 		{
-
+			printf("plane! \n");
 		}
 		//check for a camera object
 		else if(strcmp(list[0].listOfObjects[i].objectName, "camera") != 0)
 		{
-
+			printf("Camera! \n");
 		}
 	}
 }

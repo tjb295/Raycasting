@@ -1,0 +1,5 @@
+logrotate state -- version 2
+"/home/thomas/.cache/upstart/unity7.log" 2017-10-10-15:0:0
+"/home/thomas/.cache/upstart/update-notifier-crash-_var_crash__bin_TjbParser.1000.crash.log" 2017-10-10-15:54:19
+"/home/thomas/.cache/upstart/*.log" 2017-10-6-7:0:0
+"/home/thomas/.cache/upstart/unity-panel-service.log" 2017-10-10-15:0:0
